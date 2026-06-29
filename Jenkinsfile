@@ -27,13 +27,13 @@ pipeline {
             junit '**/surefire-reports/*.xml'
 
             publishHTML([
-                        allowMissing: false,
-                        alwaysLinkToLastBuild: true,
-                        keepAll: true,
-                        reportDir: 'target/cucumber-reports',
-                        reportFiles: 'cucumber.html',
-                        reportName: 'Cucumber Report'
-                    ])
+                allowMissing: false,
+                alwaysLinkToLastBuild: true,
+                keepAll: true,
+                reportDir: 'test-output',
+                reportFiles: 'ExtentReport.html',
+                reportName: 'Extent Report'
+            ])
         }
 
         success {
